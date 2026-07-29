@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left {
+    width: 65%;
+    position: relative;
+    color: white;
+    padding: 40px;
+}
+
+
+
+.weather {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.temp h1 {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+
+.right {
+    width: 35%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.city h2 {
+    font-size: 50px;
+}
+
+.city p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.status h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+.status {
+    text-align: center;
+}
+.status img {
+    width: 80px;
+}
+
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,.8);
+}
+
+.search-box button {
+    width: 65px;
+    background: #4f8ef7;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover {
+    background: #2f6ad9;
+}
+
+.cities {
+    margin-top: 40px;
+}
+
+.cities p {
+    margin: 22px 0;
+    cursor: pointer;
+    color: rgba(255,255,255,.9);
+    transition: .3s;
+}
+
+.cities p:hover {
+    color: #00d9ff;
+    padding-left: 10px;
+}
+
+hr {
+    margin: 35px 0;
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+.details h3 {
+    margin-bottom: 30px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    font-size: 18px;
+}
+
+
+
+
+@media(max-width:900px){
+
+.container{
+    flex-direction: column;
+}
+
+.left{
+    width:100%;
+    height:60vh;
+}
+
+.right{
+    width:100%;
+    height:40vh;
+    overflow:auto;
+}
+
+.weather{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.temp h1{
+    font-size:70px;
+}
+
+.city h2{
+    font-size:35px;
+}
+
+}
